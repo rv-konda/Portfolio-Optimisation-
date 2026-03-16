@@ -71,4 +71,42 @@ BNO: -18.07%
 -> Backtest the optimal portfolios with out of sample data to check if they are relevant with later developments. 
 
 
+**#BACKTESTING**
+- To ensure a more robust test of the portfolio, we proceed with testing the portfolio against two types of data (i) training data and (ii) testing data. 
+(i) Training data - for the training data, the chosen time period is 01/01/2019 - 31/12/2023 (in sample). 
+(ii) Testing data - for the testing data, the chosen time period is 01/01/2024-to date (out of sample). 
+
+**_RESULTS_**
+**Optimized Training Portfolio:**
+Return: 31.56%
+Volatility: 19.55%
+Sharpe Ratio: 1.5117
+Optimized Weights:
+LLY: 39.57%
+FCX: 9.57%
+AAPL: 29.50%
+PLD: -6.39%
+JPM: -7.42%
+GLD: 32.81%
+BNO: 2.36%
+
+
+**Test Portfolio Returns**
+Backtest Results (2024 to date):
+Total Return: 98.86%
+Annualized Return: 37.18%
+Annualized Volatility: 20.00%
+Sharpe Ratio: 1.7589
+
+**Performance Against Benchmark Index (SPY)**
+The optimized portfolio outperformed both the S&P 500 (SPY) and an equal-weighted portfolio composed of the same seven assets during the test period. However, several factors may explain this result.
+**Structural Outperformance**
+The selected assets themselves may have performed strongly during the sample period. In that case, even a simple equal-weight allocation could outperform the benchmark, and the optimization may not be the primary driver of excess returns.
+
+**Risk of Overfitting**
+Mean-variance optimization relies heavily on historical estimates of expected returns and the covariance matrix. These estimates are noisy and can lead the optimizer to exploit patterns that may not persist out of sample.
+
+**Small Asset Universe**  
+The analysis is based on a relatively small set of assets. This increases the likelihood that the optimizer finds a favorable but potentially unstable combination of weights.
+
 
